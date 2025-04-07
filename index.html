@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Leviathan Protocol</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+    <style>
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 0;
+        }
+        body {
+            margin: 0;
+            font-family: 'Orbitron', sans-serif;
+            background: url('https://e0.pxfuel.com/wallpapers/496/146/desktop-wallpaper-artstation-lagiacrus-leviathan-jet-o-arts-monster-hunter-art-monster-hunter-series-monster-hunter-world.jpg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: #fff;
+        }
+        .login-container {
+            background-color: rgba(0, 0, 0, 0.1);
+            padding: 40px 30px;
+            border-radius: 20px;
+            border: 2px solid white;
+            width: 320px;
+            text-align: center;
+            backdrop-filter: blur(4px);
+        }
+        h1 {
+            margin-bottom: 10px;
+            font-size: 26px;
+            letter-spacing: 1px;
+            color: white;
+        }
+        p.subtitle {
+            font-size: 12px;
+            color: #ccc;
+            margin-bottom: 30px;
+        }
+        input[type="email"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+        input[type="email"]::placeholder,
+        input[type="password"]::placeholder {
+            color: #ccc;
+        }
+        .checkbox-container {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: #FFD700;
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            width: 100%;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+    <div style="position: relative; z-index: 1;">
+    <div class="login-container">
+        <h1>Leviathan Protocol</h1>
+        <p class="subtitle">The system that surfaces when the end is near...</p>
+        <input type="email" id="email" placeholder="Your email">
+        <input type="password" id="password" placeholder="Password">
+        <div class="checkbox-container">
+            <input type="checkbox" id="remember"> <label for="remember">Remember me</label>
+        </div>
+        <button onclick="login()">Access</button>
+        <p class="footer">Need access? Contact support.</p>
+    </div>
+
+    <script>
+        const allowedEmails = ["teste1@email.com", "teste2@email.com"];
+        const universalPassword = "wolf2025";
+
+        function login() {
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+
+            if (allowedEmails.includes(email) && password === universalPassword) {
+                window.location.href = "https://www.google.com";
+            } else {
+                alert("Invalid email or password.");
+            }
+        }
+    </script>
+    </div>
+</body>
+</html>
