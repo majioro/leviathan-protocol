@@ -91,6 +91,10 @@
         <div class="checkbox-container">
             <input type="checkbox" id="remember"> <label for="remember">Remember me</label>
         </div>
+
+        <div id="error-message" style="color: #ff4d4d; font-size: 13px; margin-bottom: 10px; display: none;">
+  This access key is not valid for the Leviathan system. 😈
+</div>
         <button onclick="login()">Access</button>
         <p class="footer">
   Need access? <a href="https://wa.me/5511999999999" target="_blank" style="color: #fff; text-decoration: underline;">Contact support</a>
@@ -105,11 +109,11 @@
             const email = document.getElementById("email").value;
             const password = document.getElementById("password").value;
 
-            if (allowedEmails.includes(email) && password === universalPassword) {
-                window.location.href = "https://www.google.com";
-            } else {
-                alert("Invalid email or password.");
-            }
+           if (allowedEmails.includes(email) && password === universalPassword) {
+    window.location.href = "https://www.google.com";
+} else {
+    document.getElementById("error-message").style.display = "block";
+}
         }
     </script>
     </div>
