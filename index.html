@@ -110,7 +110,7 @@
             const password = document.getElementById("password").value;
 
            if (allowedEmails.includes(email) && password === universalPassword) {
-    window.location.href = "https://cheffrancescabianchi.com";
+    window.open("https://cheffrancescabianchi.com", "_blank");
 } else {
     document.getElementById("error-message").style.display = "block";
 }
